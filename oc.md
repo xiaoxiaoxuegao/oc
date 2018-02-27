@@ -67,47 +67,59 @@ $ oc debug --as-root=true dc/jorge
 * OpenShift / k8s对象有时很复杂，有许多字段。 很多时候，我最终都会在OCP文档或其他来源中查找对象定义示例。 当涉及到OCP / k8s对象定义时，您可以考虑`oc explain`真相的来源。
 * `oc explain`为您提供资源及其字段的文档。 当声明新的OCP对象时，或者当您只是无法访问官方的OCP文档时，这非常有用。
 * 例如，您可以获取pod文档和pod规范关联字段说明：
-<code>
-<p># get pod explanation</p>
-<p>$ oc explain pod</p>
-<p>DESCRIPTION:</p>
-<p>Pod is a collection of containers that can run on a host. This resource is created by clients and scheduled onto hosts.</p>
-<p>FIELDS:</p>
- <p> metadata     <Object></p>
-  <p>  Standard object's metadata. More info:</p>
-  <p>  http://releases.k8s.io/HEAD/docs/devel/api-conventions.md#metadata
-  spec <Object></p>
-   <p> Specification of the desired behavior of the pod. More info:</p>
-   <p> http://releases.k8s.io/HEAD/docs/devel/api-conventions.md#spec-and-status
-  status       <Object></p>
-   <p> Most recently observed status of the pod. This data may not be up to date.
-    Populated by the system. Read-only. More info:</p>
-   <p> http://releases.k8s.io/HEAD/docs/devel/api-conventions.md#spec-and-status
-  apiVersion   <string></p>
-  <p>  APIVersion defines the versioned schema of this representation of an
+<pre>
+# get pod explanation
+$ oc explain pod
+DESCRIPTION:
+Pod is a collection of containers that can run on a host. This resource is created by clients and scheduled onto hosts.
+
+FIELDS:
+  metadata     <Object>
+    Standard object's metadata. More info:
+    http://releases.k8s.io/HEAD/docs/devel/api-conventions.md#metadata
+
+  spec <Object>
+    Specification of the desired behavior of the pod. More info:
+    http://releases.k8s.io/HEAD/docs/devel/api-conventions.md#spec-and-status
+
+  status       <Object>
+    Most recently observed status of the pod. This data may not be up to date.
+    Populated by the system. Read-only. More info:
+    http://releases.k8s.io/HEAD/docs/devel/api-conventions.md#spec-and-status
+
+  apiVersion   <string>
+    APIVersion defines the versioned schema of this representation of an
     object. Servers should convert recognized schemas to the latest internal
-    value, and may reject unrecognized values. More info:</p>
-   <p> http://releases.k8s.io/HEAD/docs/devel/api-conventions.md#resources
-  kind <string></p>
-  <p>  Kind is a string value representing the REST resource this object
+    value, and may reject unrecognized values. More info:
+    http://releases.k8s.io/HEAD/docs/devel/api-conventions.md#resources
+
+  kind <string>
+    Kind is a string value representing the REST resource this object
     represents. Servers may infer this from the endpoint the client submits
-    requests to. Cannot be updated. In CamelCase. More info:</p>
-  <p>  http://releases.k8s.io/HEAD/docs/devel/api-conventions.md#types-kinds</p>
-<p># get pod spec affinity field</p>
-<p>$ oc explain pod.spec.affinity</p>
-<p>RESOURCE: affinity <Object></p>
-<p>DESCRIPTION:</p>
-   <p> If specified, the pod's scheduling constraints
-   Affinity is a group of affinity scheduling rules.</p>
-<p>FIELDS:</p>
- <p> nodeAffinity <Object></p>
- <p>   Describes node affinity scheduling rules for the pod.</p>
-  <p>podAffinity  <Object></p>
-  <p>  Describes pod affinity scheduling rules (e.g. co-locate this pod in the
-    same node, zone, etc. as some other pod(s)).</p>
- <p> podAntiAffinity      <Object></p>
-    <p>Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod
-    in the same node, zone, etc. as some other pod(s)).</p></pre>
+    requests to. Cannot be updated. In CamelCase. More info:
+    http://releases.k8s.io/HEAD/docs/devel/api-conventions.md#types-kinds
+
+# get pod spec affinity field
+$ oc explain pod.spec.affinity
+RESOURCE: affinity <Object>
+
+DESCRIPTION:
+    If specified, the pod's scheduling constraints
+
+   Affinity is a group of affinity scheduling rules.
+
+FIELDS:
+  nodeAffinity <Object>
+    Describes node affinity scheduling rules for the pod.
+
+  podAffinity  <Object>
+    Describes pod affinity scheduling rules (e.g. co-locate this pod in the
+    same node, zone, etc. as some other pod(s)).
+
+  podAntiAffinity      <Object>
+    Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod
+    in the same node, zone, etc. as some other pod(s)).
+</pre>
 ##6.忘记grep，awk，cut等
 * 关于oc命令的一个非常酷的事情是它具有格式化输出的内置功能。 我们都知道`-o json`或`-o yaml`，但`-o`标志为您提供了许多其他可能性。
 * 从所有这些输出选项中，我发现`go-template`和`jsonpath`是最强大的：
@@ -121,5 +133,4 @@ docker-registry</pre>
 $ oc get dc router -o=go-template='{{ .spec.strategy.type }}'
 Rolling</pre>
 * 正如你所看到的，oc命令很棒。 我鼓励你继续玩，因为OpenShift是最酷的事情之一。
-* 作者
-Jorge Tudela Gonzalez de Riancho在红帽西班牙担任云端顾问，专门从事OpenShift和与容器相关的技术。
+* 作者Jorge Tudela Gonzalez de Riancho在红帽西班牙担任云端顾问，专门从事OpenShift和与容器相关的技术。
