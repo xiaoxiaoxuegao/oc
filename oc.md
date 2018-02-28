@@ -67,8 +67,7 @@ $ oc debug --as-root=true dc/jorge
 * OpenShift / k8s对象有时很复杂，有许多字段。 很多时候，我最终都会在OCP文档或其他来源中查找对象定义示例。 当涉及到OCP / k8s对象定义时，您可以考虑`oc explain`真相的来源。
 * `oc explain`为您提供资源及其字段的文档。 当声明新的OCP对象时，或者当您只是无法访问官方的OCP文档时，这非常有用。
 * 例如，您可以获取pod文档和pod规范关联字段说明：
-<pre><code>
-# get pod explanation
+<pre># get pod explanation
 $ oc explain pod
 DESCRIPTION:
 Pod is a collection of containers that can run on a host. This resource is created by clients and scheduled onto hosts.
@@ -118,8 +117,7 @@ FIELDS:
 
   podAntiAffinity      <Object>
     Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod
-    in the same node, zone, etc. as some other pod(s)).
-<code></pre>
+    in the same node, zone, etc. as some other pod(s)).</pre>
 ##6.忘记grep，awk，cut等
 * 关于oc命令的一个非常酷的事情是它具有格式化输出的内置功能。 我们都知道`-o json`或`-o yaml`，但`-o`标志为您提供了许多其他可能性。
 * 从所有这些输出选项中，我发现`go-template`和`jsonpath`是最强大的：
