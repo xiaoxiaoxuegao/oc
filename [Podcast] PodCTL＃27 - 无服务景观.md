@@ -6,7 +6,9 @@
 上周，CNCF的无服务器工作组发布了无服务器方面的一些声明，因此我们认为现在是时候了解他们的指导以及围绕整个行业的无服务器的更广泛的趋势。
 
 **PodCTL - 容器| Kubernetes |OpenShift**
+
 ##PodCTL #27 - The Serverless Landscape
+
 **概述**：Brian和Tyler谈论了CNCF新的无服务器工作组和白皮书，无服务器的四个要素，无服务器和FaaS的区别，以及Ops团队在无服务器世界中的持续作用。
 
 **显示注释：**
@@ -20,6 +22,7 @@
 * [无服务并不简单](https://medium.com/m/global-identity?redirectUrl=https://medium.freecodecamp.org/serverless-is-cheaper-not-simpler-a10c4fc30e49)
 * [关于无服务器和操作系统的Twitter Rant](https://twitter.com/ibuildthecloud/status/965781691078868992)
 * [适用于无服务器](https://opensource.com/article/17/8/ansible-serverless-applications)
+
 **主题1** - 让我们来谈谈CNCF中的无服务器的历史，也许在PaaS和Kubernetes的背景下。
 
 **主题2** - 在讨论无服务器时，似乎有4个方面需要解剖：
