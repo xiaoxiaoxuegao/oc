@@ -3,7 +3,7 @@
 
 [原文地址：https://blog.openshift.com/oc-command-newbies/]
 
-有一天我遇到了关于bash的这篇文章。 如果你是专业bash用户，你可能已经知道所有这些技巧，但如果你是一个新手或不是这样的专业用户，这很有可能是你的一天。
+有一天我遇到了关于[bash](https://zwischenzugs.com/2018/01/06/ten-things-i-wish-id-known-about-bash/)的这篇文章。 如果你是专业bash用户，你可能已经知道所有这些技巧，但如果你是一个新手或不是这样的专业用户，这很有可能是你的一天。
 
 我认为为oc命令创建类似的东西会很有用。 oc命令是dope，每个人都应该知道。它的设计精良，一致，灵活，并且如您所见，还有许多值得尝试的隐藏功能。
 
@@ -38,7 +38,7 @@ I0216 21:33:15.797185    1389 round_trippers.go:405] PATCH https://192.168.42.77
 * 注意：在绝望的时刻，你可以随心所欲的添加9个，结果会和9个是一样的，但会让你感到放心。
 <pre>$ oc --loglevel 9999 get pod</pre>
 ##2.su - 
-* 是的，你正在阅读正确的。 您可以替换正在运行oc命令的用户，或以OCP行话替换，可以模拟用户。 如果你有足够的权限来模仿，显然。 你只需要使用标识`--as`。
+* 是的，你正在阅读正确的。 您可以替换正在运行oc命令的用户，或以OCP行话替换，可以[模拟](https://docs.openshift.com/container-platform/3.7/architecture/additional_concepts/authentication.html#authentication-impersonation)用户。 如果你有足够的权限来模仿，显然。 你只需要使用标识`--as`。
 例如：
 <pre># run the command as jorge user
 $ oc --as=jorge get pods
