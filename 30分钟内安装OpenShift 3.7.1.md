@@ -1,6 +1,7 @@
 ##30分钟内安装OpenShift 3.7.1
-  [原文地址：https://blog.openshift.com/installing-openshift-3-7-1-30-minutes/]
-  [此视频是针对开发人员的OpenShift更新：在30分钟内设置完整群集。](https://blog.openshift.com/openshift-developers-set-full-cluster-30-minutes/)
+  [原文地址：https://blog.openshift.com/installing-openshift-3-7-1-30-minutes/]
+  
+ [此视频是针对开发人员的OpenShift更新：在30分钟内设置完整群集。](https://blog.openshift.com/openshift-developers-set-full-cluster-30-minutes/)
 
  我被开发者最常问道的一个问题是如何在本地使用OpenShift进行自己的开发。幸运的是，我们有几个选项，选择正确的选项取决于您喜欢使用的特定开发环境。
 
