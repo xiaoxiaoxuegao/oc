@@ -123,7 +123,9 @@ FIELDS:
   podAntiAffinity      <Object>
     Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod
     in the same node, zone, etc. as some other pod(s)).</pre>
+    
 ##6.忘记grep，awk，cut等
+
 * 关于oc命令的一个非常酷的事情是它具有格式化输出的内置功能。 我们都知道`-o json`或`-o yaml`，但`-o`标志为您提供了许多其他可能性。
 * 从所有这些输出选项中，我发现`go-template`和`jsonpath`是最强大的：
 <pre>json|yaml|wide|name|custom-columns=…|custom-columns-file=...|go-template=...|go-template-file=...|jsonpath=...|jsonpath-file=...</pre>
