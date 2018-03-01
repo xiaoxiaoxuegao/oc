@@ -1,4 +1,4 @@
-##30分钟内安装OpenShift 3.7.1
+#30分钟内安装OpenShift 3.7.1
   [原文地址：https://blog.openshift.com/installing-openshift-3-7-1-30-minutes/]
   
  [此视频是针对开发人员的OpenShift更新：在30分钟内设置完整群集。](https://blog.openshift.com/openshift-developers-set-full-cluster-30-minutes/)
