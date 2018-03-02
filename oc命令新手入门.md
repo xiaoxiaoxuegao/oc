@@ -3,7 +3,7 @@
 
 [原文地址：https://blog.openshift.com/oc-command-newbies/]
 
-有一天我看到了关于[bash](https://zwischenzugs.com/2018/01/06/ten-things-i-wish-id-known-about-bash/)的这篇文章。 如果你是专业bash用户，你可能已经知道所有这些技巧，但如果你是一个新手或不是这样的专业用户，这很有可能是你的第一天。
+有一天我看到了关于[bash](https://zwischenzugs.com/2018/01/06/ten-things-i-wish-id-known-about-bash/)的这篇文章。 如果你是专业bash用户，你可能已经知道所有这些技巧，但如果你是一个新手或不是这样的专业用户，这很有可能是你的一天。
 
 我认为为oc命令创建类似的东西会很有用。 oc命令是dope，每个人都应该知道。它的设计精良，一致，灵活，并且如您所见，还有许多值得尝试的隐藏功能。
 
@@ -76,55 +76,45 @@ $ oc debug --as-root=true dc/jorge
 $ oc explain pod
 DESCRIPTION:
 Pod is a collection of containers that can run on a host. This resource is created by clients and scheduled onto hosts.
-
 FIELDS:
   metadata     <Object>
     Standard object's metadata. More info:
     http://releases.k8s.io/HEAD/docs/devel/api-conventions.md#metadata
-
   spec <Object>
     Specification of the desired behavior of the pod. More info:
     http://releases.k8s.io/HEAD/docs/devel/api-conventions.md#spec-and-status
-
   status       <Object>
     Most recently observed status of the pod. This data may not be up to date.
     Populated by the system. Read-only. More info:
     http://releases.k8s.io/HEAD/docs/devel/api-conventions.md#spec-and-status
-
   apiVersion   <string>
     APIVersion defines the versioned schema of this representation of an
     object. Servers should convert recognized schemas to the latest internal
     value, and may reject unrecognized values. More info:
     http://releases.k8s.io/HEAD/docs/devel/api-conventions.md#resources
-
   kind <string>
     Kind is a string value representing the REST resource this object
     represents. Servers may infer this from the endpoint the client submits
     requests to. Cannot be updated. In CamelCase. More info:
     http://releases.k8s.io/HEAD/docs/devel/api-conventions.md#types-kinds
-
   # get pod spec affinity field
   $ oc explain pod.spec.affinity
 RESOURCE: affinity <Object>
-
 DESCRIPTION:
     If specified, the pod's scheduling constraints
-
    Affinity is a group of affinity scheduling rules.
-
 FIELDS:
   nodeAffinity <Object>
     Describes node affinity scheduling rules for the pod.
-
   podAffinity  <Object>
     Describes pod affinity scheduling rules (e.g. co-locate this pod in the
     same node, zone, etc. as some other pod(s)).
-
   podAntiAffinity      <Object>
     Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod
-    in the same node, zone, etc. as some other pod(s)).</pre>
-    
-##6.忘记grep，awk，cut等
+    in the same node, zone, etc. as some other pod(s)).
+</pre></pre>
+    
+## 6.忘记grep，awk，cut等
 * 关于oc命令的一个非常酷的事情是它具有格式化输出的内置功能。 我们都知道`-o json`或`-o yaml`，但`-o`标志为您提供了许多其他可能性。
 * 从所有这些输出选项中，我发现`go-template`和`jsonpath`是最强大的：
 <pre>json|yaml|wide|name|custom-columns=…|custom-columns-file=...|go-template=...|go-template-file=...|jsonpath=...|jsonpath-file=...</pre>
