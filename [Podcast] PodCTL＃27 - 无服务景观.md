@@ -23,7 +23,7 @@
 * [关于无服务器和操作系统的Twitter Rant](https://twitter.com/ibuildthecloud/status/965781691078868992)
 * [适用于无服务器](https://opensource.com/article/17/8/ansible-serverless-applications)
 
-**主题1** - 让我们来谈谈CNCF中的无服务器的历史，也许在PaaS和Kubernetes的背景下。
+**主题1** - 让我们来谈谈CNCF中的无服务器的历史，在PaaS和Kubernetes的背景下。
 
 **主题2** - 在讨论无服务器时，似乎有4个方面需要解剖：
 
