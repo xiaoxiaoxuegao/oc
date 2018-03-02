@@ -17,7 +17,7 @@ minishift addon install ansible-service-broker
 minishift addon apply ansible-service-broker
 </pre>
 登录到CDK控制台时，应该可以看到预先安装的Ansible APB：
-<code><div align="center">![alt img](https://blog.openshift.com/wp-content/uploads/ansible1.png)</div></code>
+![alt img](https://blog.openshift.com/wp-content/uploads/ansible1.png)
 ## 在客户机上安装ABP命令行
 配置您的shell以使用Minishift Docker守护进程：
 <pre>
@@ -32,7 +32,7 @@ wget https://raw.githubusercontent.com/ansibleplaybookbundle/ansible-playbook-bu
 apb --help
 </pre>
 如果一切顺利，你应该看到如下情况：
-<code><div align="center">![alt img](https://blog.openshift.com/wp-content/uploads/ansible2.png)</div></code>
+![alt img](https://blog.openshift.com/wp-content/uploads/ansible2.png)
 ## 测试ABP CLI和CDK之间的连接
 
 您将需要特殊权限才能与CDK安装中的代理一起使用。 因此，我们需要执行以下操作：
@@ -44,12 +44,12 @@ oc login -u developer
 <pre>
 apb list
 </pre>
-<code><div align="center">![alt img](https://blog.openshift.com/wp-content/uploads/ansible3.png)<div></code>
+![alt img](https://blog.openshift.com/wp-content/uploads/ansible3.png)
 
 ## 配置Ansible Service Broker从本地注册表中提取图像
 
 在我们的Ansible Service Broker的默认配置中，APB从`https://registry.hub.docker.com/`中提取。 我们需要将其更改为在CDK内运行的本地注册表。
-<code><div align="center">![alt img](https://blog.openshift.com/wp-content/uploads/ansible4.png)</div></code>
+![alt img](https://blog.openshift.com/wp-content/uploads/ansible4.png)
 <pre>
 registry:
 - type: local_openshift
@@ -68,12 +68,12 @@ Ansible Service Broker窗格现在需要重新启动才能引入新配置。
 cd sample-service-apb</pre>
 现在我们在本地建立我们的APB。 该过程完成后，新建的APB docker 镜像应该出现在您的本地Docker注册表中：
 <pre>apb build</pre>
-<code><div align="center">![alt img](https://blog.openshift.com/wp-content/uploads/ansible5.png)</div></code>
+![alt img](https://blog.openshift.com/wp-content/uploads/ansible5.png)
 最后，我们需要将Docker镜像推送到CDK内部的Service Broker中：
 <pre>apb push
 </pre>
 现在您应该能够在CDK的服务目录中看到您的第一个APB：
-<code><div align="center">![alt img](https://blog.openshift.com/wp-content/uploads/ansible6.png)</div></code>
+![alt img](https://blog.openshift.com/wp-content/uploads/ansible6.png)
 
 ## 参考
 
