@@ -7,7 +7,7 @@
 
 **PodCTL - 容器| Kubernetes |OpenShift**
 
-##PodCTL #27 - The Serverless Landscape
+### PodCTL #27 - The Serverless Landscape
 
 **概述**：Brian和Tyler谈论了CNCF新的无服务器工作组和白皮书，无服务器的四个要素，无服务器和FaaS的区别，以及Ops团队在无服务器世界中的持续作用。
 
