@@ -18,7 +18,7 @@ minishift addon apply ansible-service-broker
 </pre>
 登录到CDK控制台时，应该可以看到预先安装的Ansible APB：
 <code><div align="center">![alt img](https://blog.openshift.com/wp-content/uploads/ansible1.png)</div></code>
-##在客户机上安装ABP命令行
+## 在客户机上安装ABP命令行
 配置您的shell以使用Minishift Docker守护进程：
 <pre>
 eval $(minishift docker-env)
@@ -46,7 +46,7 @@ apb list
 </pre>
 <code><div align="center">![alt img](https://blog.openshift.com/wp-content/uploads/ansible3.png)<div></code>
 
-##配置Ansible Service Broker从本地注册表中提取图像
+## 配置Ansible Service Broker从本地注册表中提取图像
 
 在我们的Ansible Service Broker的默认配置中，APB从`https://registry.hub.docker.com/`中提取。 我们需要将其更改为在CDK内运行的本地注册表。
 <code><div align="center">![alt img](https://blog.openshift.com/wp-content/uploads/ansible4.png)</div></code>
@@ -61,12 +61,12 @@ white_list:
 </pre>
 Ansible Service Broker窗格现在需要重新启动才能引入新配置。
 
-##创建你的第一个APB
+## 创建你的第一个APB
 
 首先，我们使用CLI搭建我们的新服务：
 <pre>apb init sample-service-apb
 cd sample-service-apb</pre>
-现在我们在本地建立我们的APB。 该过程完成后，新建的APB泊坞窗镜像应该出现在您的本地Docker注册表中：
+现在我们在本地建立我们的APB。 该过程完成后，新建的APB docker 镜像应该出现在您的本地Docker注册表中：
 <pre>apb build</pre>
 <code><div align="center">![alt img](https://blog.openshift.com/wp-content/uploads/ansible5.png)</div></code>
 最后，我们需要将Docker镜像推送到CDK内部的Service Broker中：
@@ -75,7 +75,7 @@ cd sample-service-apb</pre>
 现在您应该能够在CDK的服务目录中看到您的第一个APB：
 <code><div align="center">![alt img](https://blog.openshift.com/wp-content/uploads/ansible6.png)</div></code>
 
-##参考
+## 参考
 
 从这些资源中了解更多关于Ansible Playbook开发和Minishift插件的信息：
 
